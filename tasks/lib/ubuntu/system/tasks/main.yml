@@ -8,3 +8,26 @@
 - name: Upgrade package
   apt:
     upgrade: dist
+
+- name: install monitoring tools
+  apt: name={{item}} state=installed
+  with_items:
+    - sysstat
+
+- name: create group sysadmin
+  group:
+    name: sysadmin
+    gid: 1122
+    state: present
+
+- name: create user sysadmin        
+  user:
+    name: sysadmin
+    uid: 1122
+    groups: sysadmin,adm
+    append: yes
+
+- name: create user webapp        
+  user:
+    name: webapp
+    uid: 1124
