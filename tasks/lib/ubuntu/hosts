@@ -1,0 +1,2 @@
+[ubuntu]
+192.168.56.101 ansible_ssh_user=doko ansible_sudo_pass=rh123

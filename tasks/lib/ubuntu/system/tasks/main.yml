@@ -1,0 +1,10 @@
+- name: sudo to root
+  command: whoami
+
+- name: Update package
+  apt:
+    update_cache: yes
+
+- name: Upgrade package
+  apt:
+    upgrade: dist

@@ -1,0 +1,9 @@
+- hosts: ubuntu
+  user: doko
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
+  roles:
+    - system
+  
