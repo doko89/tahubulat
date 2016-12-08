@@ -1,6 +1,5 @@
 - name: sudo to root
   command: whoami
-
 - name: Update package
   apt:
     update_cache: yes
@@ -31,3 +30,5 @@
   user:
     name: webapp
     uid: 1124
+
+  
